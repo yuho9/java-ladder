@@ -81,6 +81,14 @@ public class Game2 {
 			System.out.println(ladder.showWeight());
 		}
 		
+		// 결과 출력
+        System.out.print("     ");
+        for (int i = 0; i < resultList.size(); i++) {
+            String space = resultList.get(i).spaceSetting();
+            System.out.print(resultList.get(i).getResult() + space +" ");
+        }
+        System.out.println();
+		
 		
 		
 		sc.close();
