@@ -5,6 +5,8 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
+import ladder2.person;
+
 
 public class Game {
 
@@ -18,6 +20,18 @@ public class Game {
 		String input = sc.nextLine();
 		String[] name = input.split(",");
 		
+		//참여자 리스트 생성
+		List<Person> participant = new ArrayList<>();
+		for (String n : name) {
+			try {
+				participant.add(new Person(n));
+				} 
+			catch (IllegalArgumentException e) {
+				System.out.println(e.getMessage());
+				return; // 프로그램 종료
+			}
+		}
+		  
 		sc.close();
 	}
 
