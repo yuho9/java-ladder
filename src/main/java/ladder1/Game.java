@@ -31,6 +31,16 @@ public class Game {
 				return; // 프로그램 종료
 			}
 		}
+		
+		//횟수 입력
+		System.out.println("최대 사다리 높이는 몇 개인가요?");
+		int n;
+		try {
+            n = sc.nextInt();
+         } catch (InputMismatchException e) {
+             System.out.println("숫자를 입력해야 합니다.");
+             return;	//프로로그램 종료
+         }
 		  
 		sc.close();
 	}
