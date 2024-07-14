@@ -30,6 +30,11 @@ public class Game2 {
 			}
 		}
 		
+		//실행 결과 입력 후 쉽표를 기준으로 분리
+		System.out.println("실행 결과를 입력하세요. (이름은 쉼표(,)로 구분하세요)");
+        input = sc.nextLine();
+        String[] result = input.split(",");
+		
 		//횟수 입력
 		System.out.println("최대 사다리 높이는 몇 개인가요?");
 		int n;
