@@ -5,6 +5,7 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
+import ladder2.makeLadder;
 import ladder2.person;
 
 
@@ -47,7 +48,14 @@ public class Game {
 			System.out.println("양수를 입력해야 합니다.");
 			return;	//프로그램 종료
 		}
-		  
+		 
+		//사다리 생성
+		String[][] completeLadder = new String[n][];
+		makeLadder ladder = new makeLadder(participant.size()-1);
+		
+		
+		
+		
 		sc.close();
 	}
 
