@@ -10,4 +10,19 @@ private String name;
         }
 		this.name = name;
 	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String newName) {
+		this.name = newName;
+	}
+	
+	public String spaceSetting() {
+		String result="";
+		for(int i=0;i<5-name.length();i++) {
+			result+=" ";
+		}
+		return result;
+	}
 }

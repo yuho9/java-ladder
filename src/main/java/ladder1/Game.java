@@ -53,6 +53,15 @@ public class Game {
 		String[][] completeLadder = new String[n][];
 		makeLadder ladder = new makeLadder(participant.size()-1);
 		
+		//이름 출력
+		System.out.print("     ");
+		for(int i=0;i<participant.size();i++) {
+			String space = participant.get(i).spaceSetting();
+			System.out.print(participant.get(i).getName() + space + " ");
+		}
+		System.out.println();
+
+		
 		
 		
 		
