@@ -51,7 +51,7 @@ public class Game {
 		 
 		//사다리 생성
 		String[][] completeLadder = new String[n][];
-		makeLadder ladder = new makeLadder(participant.size()-1);
+		MakeLadder ladder = new MakeLadder(participant.size()-1, n);
 		
 		//이름 출력
 		System.out.print("     ");
@@ -61,7 +61,11 @@ public class Game {
 		}
 		System.out.println();
 
-		
+		//사다리 출력
+		for(int i=0;i<n;i++) {
+			completeLadder[i] = ladder.combination();
+			System.out.println(ladder.showWeight());
+		}
 		
 		
 		
