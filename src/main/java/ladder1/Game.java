@@ -41,6 +41,12 @@ public class Game {
              System.out.println("숫자를 입력해야 합니다.");
              return;	//프로로그램 종료
          }
+		
+		// n <=0 일때 오류처리
+		if(n<=0) {
+			System.out.println("양수를 입력해야 합니다.");
+			return;	//프로그램 종료
+		}
 		  
 		sc.close();
 	}
