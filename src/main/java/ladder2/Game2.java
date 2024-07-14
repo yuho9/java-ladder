@@ -5,6 +5,7 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
+import ladder.result;
 import ladder1.MakeLadder;
 import ladder1.Person;
 
@@ -34,6 +35,17 @@ public class Game2 {
 		System.out.println("실행 결과를 입력하세요. (이름은 쉼표(,)로 구분하세요)");
         input = sc.nextLine();
         String[] result = input.split(",");
+        
+     // 결과 리스트 생성
+        List<Result> resultList = new ArrayList<>();
+        for (String r : result) {
+            try {
+                resultList.add(new Result(r.trim()));
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+                return; // 프로그램 종료
+            }
+        }
 		
 		//횟수 입력
 		System.out.println("최대 사다리 높이는 몇 개인가요?");
