@@ -46,5 +46,11 @@ public class Ladder {
 		return "-----";
 	}
 	
+	void makeLadder() {
+		for(int i=0;i<width-1;i++) {
+			makeRandom(i);
+			ladder.add(change(i));
+		}
+	}
 	
 }
