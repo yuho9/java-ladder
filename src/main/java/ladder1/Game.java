@@ -10,8 +10,16 @@ public class Game {
         InputView inputView = new InputView();
         ResultView resultView = new ResultView();
         
-        List<String> participantNames = inputView.getParticipantNames();
-        int ladderHeight = inputView.getLadderHeight();
+        List<String> participantNames;
+        int ladderHeight;
+
+        try {
+            participantNames = inputView.getParticipantNames();
+            ladderHeight = inputView.getLadderHeight();
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return; // 오류 발생 시 프로그램을 종료
+        }
         
         resultView.printParticipants(participantNames);
         
