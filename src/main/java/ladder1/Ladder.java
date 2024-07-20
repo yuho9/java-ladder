@@ -8,7 +8,6 @@ public class Ladder {
 	private int width;
 	private int height;
 	private List<String> ladder;
-	private List<List<String>> completeLadder;
 	private int[] randomArray;
 	
 	public Ladder(int width, int height) {
@@ -52,12 +51,6 @@ public class Ladder {
 			ladder.add(change(i));
 		}
 	}
-	
-	public void complete() {
-		for(int i=0;i<height;i++) {
-			makeLadder();
-			completeLadder.add(ladder);
-		}
-	}
+
 	
 }
