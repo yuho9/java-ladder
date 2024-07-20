@@ -29,7 +29,7 @@ public class Ladder {
 		this.height = h; 
 	}
 	
-	void makeRandom(int i) {
+	public void makeRandom(int i) {
 		Random random = new Random();
 		if(randomArray[i-1]==0 || i==0) {
 			randomArray[i] = random.nextInt(2);
@@ -37,6 +37,13 @@ public class Ladder {
 		if(randomArray[i-1]==1) {
 			randomArray[i] = 0;
 		}
+	}
+	
+	public String change(int i) {
+		if(randomArray[i]==0) {
+			return "     ";
+		}
+		return "-----";
 	}
 	
 	
