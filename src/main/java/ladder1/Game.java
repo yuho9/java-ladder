@@ -15,8 +15,14 @@ public class Game {
 
         try {
             participantNames = inputView.getParticipantNames();
-            ladderHeight = inputView.getLadderHeight();
         } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return; // 오류 발생 시 프로그램을 종료
+        }
+        
+        try {
+        	ladderHeight = inputView.getLadderHeight();
+        }catch (Exception e) {
             System.out.println(e.getMessage());
             return; // 오류 발생 시 프로그램을 종료
         }

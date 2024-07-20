@@ -1,6 +1,7 @@
 package ladder1;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -33,8 +34,22 @@ public class InputView {
 	
 	public int getLadderHeight() {
 		System.out.println("최대 사다리 높이는 몇 개인가요?");
-		return sc.nextInt();
+		int n=0;
+		 try {
+             n = sc.nextInt();
+             validateLadderHeight(n);
+             return n;
+         } catch (InputMismatchException e) {
+        	 throw new InputMismatchException("숫자를 입력해야 합니다.");
+         }
 	}
 	
+	
+	
+	 private void validateLadderHeight(int height) {
+	        if (height <= 1) {
+	            throw new IllegalArgumentException("사다리 높이는 2 이상의 정수여야 합니다.");
+	        }
+	  }
 	
 }
