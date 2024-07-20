@@ -1,6 +1,7 @@
 package ladder1;
 
 import java.util.List;
+import java.util.Random;
 
 public class Ladder {
 
@@ -8,6 +9,7 @@ public class Ladder {
 	private int height;
 	private List<String> ladder;
 	private List<List<String>> completeLadder;
+	private int[] randomArray;
 	
 	public Ladder(int width, int height) {
 		this.width = width;
@@ -26,5 +28,16 @@ public class Ladder {
 	public void setHeight(int h) {
 		this.height = h; 
 	}
+	
+	void makeRandom(int i) {
+		Random random = new Random();
+		if(randomArray[i-1]==0 || i==0) {
+			randomArray[i] = random.nextInt(2);
+		}
+		if(randomArray[i-1]==1) {
+			randomArray[i] = 0;
+		}
+	}
+	
 	
 }
