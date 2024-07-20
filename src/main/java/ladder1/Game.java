@@ -1,10 +1,14 @@
 package ladder1;
 
+import java.util.List;
+
 public class Game {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		InputView inputView = new InputView();
 
+		 List<String> participantNames = inputView.getParticipantNames();
 	}
 
 }
