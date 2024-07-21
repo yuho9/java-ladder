@@ -63,8 +63,7 @@ public class Game2 {
         if(selection.equals("all")) {
         	location = -1;
         }
-        
-        System.out.println(location);
+       
         
         if(location!=-1) {
         	resultView.printResult(completeLadder, location, resultList);
