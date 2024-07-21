@@ -49,6 +49,28 @@ public class Game2 {
         }
         
         resultView.printStringList(resultList);
+        
+        String selection = inputView.selectMember();
+        
+        int n = 0;
+        int location = 0;
+        
+        for(String name : participantNames) {
+        	location = findLocation(name,n,selection);
+        	n++;
+        }
+        
+        if(selection.equals("all")) {
+        	location = -1;
+        }
+        System.out.println(location);
+    }
+    
+    public static int findLocation(String name, int i, String selection) {
+    	if(name.equals(selection)) {
+    		return i;
+    	}
+    	return 0;
     }
 }
 
