@@ -56,14 +56,18 @@ public class Game2 {
         int location = 0;
         
         for(String name : participantNames) {
-        	location = findLocation(name,n,selection);
+        	location += findLocation(name,n,selection);
         	n++;
         }
         
         if(selection.equals("all")) {
         	location = -1;
         }
+        
         System.out.println(location);
+        
+        resultView.printResult(completeLadder, location, resultList);
+        
     }
     
     public static int findLocation(String name, int i, String selection) {

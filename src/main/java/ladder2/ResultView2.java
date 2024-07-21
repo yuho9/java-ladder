@@ -20,4 +20,11 @@ public class ResultView2 {
         }
         System.out.println();
     }
+    
+    public void printResult(List<Ladder2> completeLadder, int location, List<String> resultList) {
+    	FindResult resultindex = new FindResult(completeLadder, location);
+        int idx = resultindex.find();
+        System.out.println("실행 결과");
+        System.out.println(resultList.get(idx));
+    }
 }
