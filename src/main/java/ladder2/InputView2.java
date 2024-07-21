@@ -17,7 +17,7 @@ public class InputView2 {
         List<String> nameList = new ArrayList<>();
         
         for (String name : nameArray) {
-            validateNameLength(name);
+            validateStringLength(name);
             nameList.add(name);
         }
 
@@ -26,7 +26,7 @@ public class InputView2 {
         return nameList;
     }
 	
-	public List<String> getResult() {
+	public List<String> getResult(List<String> nameList) {
         System.out.println("실행 결과를 입력하세요. (결과는 쉼표(,)로 구분하세요)");
 
         String input = sc.nextLine(); 
@@ -34,24 +34,30 @@ public class InputView2 {
         List<String> resultList = new ArrayList<>();
         
         for (String result : resultArray) {
-            validateNameLength(result);
+            validateStringLength(result);
             resultList.add(result);
         }
 
-        validateNameListLength(resultList);
+        validateNameListLength(nameList,resultList);
         
         return resultList;
     }
 
-    private void validateNameLength(String name) {
+    private void validateStringLength(String name) {
         if (name.length() > 5) {
-            throw new IllegalArgumentException("이름은 5자 이하만 가능합니다: " + name);
+            throw new IllegalArgumentException("5자 이하만 가능합니다: " + name);
         }
     }
     
     private void validateNameListLength(List<String> nameList) {
         if (nameList.size()<=1) {
             throw new IllegalArgumentException("참여자는 2명 이상이어야 합니다.");
+        }
+    }
+    
+    private void validateNameListLength(List<String> nameList,List<String> resultList) {
+        if (nameList.size()!=resultList.size()) {
+            throw new IllegalArgumentException("참여자의 수와 결과의 수가 같아야 합니다.");
         }
     }
 	

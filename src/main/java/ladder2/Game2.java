@@ -22,7 +22,7 @@ public class Game2 {
         }
         
         try {
-        	resultList = inputView.getResult();
+        	resultList = inputView.getResult(participantNames);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
             return; // 오류 발생 시 프로그램을 종료
