@@ -27,4 +27,12 @@ public class ResultView2 {
         System.out.println("실행 결과");
         System.out.println(resultList.get(idx));
     }
+    
+    public void printAllResult(List<Ladder2> completeLadder, List<String> resultList, List<String> nameList) {
+        FindResult resultindex = new FindResult(completeLadder, -1);
+        List<Integer> allList = resultindex.findAll(resultList.size()); 
+        for (int i = 0; i < allList.size(); i++) { 
+            System.out.println(nameList.get(i) + " : " + resultList.get(allList.get(i)));
+        }
+    }
 }

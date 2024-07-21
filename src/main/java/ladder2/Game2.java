@@ -66,7 +66,13 @@ public class Game2 {
         
         System.out.println(location);
         
-        resultView.printResult(completeLadder, location, resultList);
+        if(location!=-1) {
+        	resultView.printResult(completeLadder, location, resultList);
+        }
+        
+        if(location == -1) {
+        	resultView.printAllResult(completeLadder,resultList,participantNames);
+        }
         
     }
     
