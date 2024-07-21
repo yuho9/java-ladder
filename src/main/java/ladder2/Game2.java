@@ -35,7 +35,7 @@ public class Game2 {
             return; // 오류 발생 시 프로그램을 종료
         }
         
-        resultView.printParticipants(participantNames);
+        resultView.printStringList(participantNames);
         
         List<Ladder2> completeLadder = new ArrayList<>();
         for (int i = 0; i < ladderHeight; i++) {
@@ -47,6 +47,8 @@ public class Game2 {
         for (Ladder2 l : completeLadder) {
             resultView.printLadder(l.getLadder());
         }
+        
+        resultView.printStringList(resultList);
     }
 }
 

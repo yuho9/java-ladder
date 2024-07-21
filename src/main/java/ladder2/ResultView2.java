@@ -4,11 +4,11 @@ import java.util.List;
 
 public class ResultView2 {
 
-    public void printParticipants(List<String> participants) {
+    public void printStringList(List<String> StringList) {
     	System.out.print("     ");
-        for (String person : participants) {
-            StringList p = new StringList(person);
-            System.out.print(p.getFormattedName() + " ");
+        for (String word : StringList) {
+            StringList w = new StringList(word);
+            System.out.print(w.getFormattedWord() + " ");
         }
         System.out.println();
     }

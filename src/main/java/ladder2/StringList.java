@@ -2,20 +2,20 @@ package ladder2;
 
 public class StringList {
 
-	private String name;
+	private String word;
 
-    public StringList(String name) {
-        this.name = name;
+    public StringList(String word) {
+        this.word = word;
     }
     
-    public String getName() {
-    	return name;
+    public String getWord() {
+    	return word;
     }
-    public void setName(String name) {
-    	this.name = name;
+    public void setWord(String word) {
+    	this.word = word;
     }
     
-    public String getFormattedName() {
-        return String.format("%-5s", name);
+    public String getFormattedWord() {
+        return String.format("%-5s", word);
     }
 }
