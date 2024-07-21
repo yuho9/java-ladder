@@ -12,8 +12,8 @@ public class InputView2 {
 	public List<String> getParticipantNames() {
         System.out.println("참여할 사람 이름을 입력하세요. (이름은 쉼표(,)로 구분하세요)");
 
-        String input = sc.nextLine();  // next() 대신 nextLine() 사용
-        String[] nameArray = input.split(",");  // 쉼표와 공백을 구분자로 처리
+        String input = sc.nextLine();  
+        String[] nameArray = input.split(",");  
         List<String> nameList = new ArrayList<>();
         
         for (String name : nameArray) {
@@ -24,6 +24,23 @@ public class InputView2 {
         validateNameListLength(nameList);
         
         return nameList;
+    }
+	
+	public List<String> getResult() {
+        System.out.println("실행 결과를 입력하세요. (결과는 쉼표(,)로 구분하세요)");
+
+        String input = sc.nextLine(); 
+        String[] resultArray = input.split(","); 
+        List<String> resultList = new ArrayList<>();
+        
+        for (String result : resultArray) {
+            validateNameLength(result);
+            resultList.add(result);
+        }
+
+        validateNameListLength(resultList);
+        
+        return resultList;
     }
 
     private void validateNameLength(String name) {

@@ -11,10 +11,18 @@ public class Game2 {
         ResultView2 resultView = new ResultView2();
         
         List<String> participantNames;
+        List<String> resultList;
         int ladderHeight;
 
         try {
             participantNames = inputView.getParticipantNames();
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return; // 오류 발생 시 프로그램을 종료
+        }
+        
+        try {
+        	resultList = inputView.getResult();
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
             return; // 오류 발생 시 프로그램을 종료
