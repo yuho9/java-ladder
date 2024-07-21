@@ -83,4 +83,8 @@ public class InputView2 {
 	        }
 	  }
 	
+	 public String selectMember() {
+		 System.out.println("결과를 보고 싶은 사람은?");
+		 return sc.next();
+	 }
 }
